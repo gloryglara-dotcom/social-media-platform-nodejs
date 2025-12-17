@@ -3,10 +3,10 @@
 <body>
 <h2>Create Post</h2>
 <input id="post" placeholder="Write something">
-<button onclick="createPost()">Post</button>
+<button onclick="post()">Post</button>
 
 <script>
-function createPost(){
+function post(){
  fetch("http://localhost:3001/post",{
   method:"POST",
   headers:{"Content-Type":"application/json"},
@@ -17,3 +17,5 @@ function createPost(){
 </script>
 </body>
 </html>
+
+
