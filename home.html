@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Create Post</h2>
+<input id="post" placeholder="Write something">
+<button onclick="createPost()">Post</button>
+
+<script>
+function createPost(){
+ fetch("http://localhost:3001/post",{
+  method:"POST",
+  headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({text:document.getElementById("post").value})
+ });
+ alert("Post added");
+}
+</script>
+</body>
+</html>
